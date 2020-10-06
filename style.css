@@ -1,0 +1,191 @@
+/*Import Piazzolla & Open Source Sans Font*/
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@500;700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap");
+
+/*Global Styles*/
+:root {
+  --white: #ffffff; /*White*/
+  --black: #000000; /*Black*/
+  --red-sauce: #982b24; /*Heading*/
+  --dark-sauce: #4d0f0b; /*Link*/
+  --link-hover: rgba(152, 43, 36, 0.8); /* 80%: Link Hover*/
+  --dough: #e9d7bd; /*Background */
+  --light-dough: rgba(233, 215, 189, 0.5); /* 50% Tool Background */
+  --dark-dough: rgba(178, 144, 110, 0.5); /*Small Bar on Left*/
+  --caption: #6d6d6d; /*Caption Text under h1*/
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Piazzolla", serif;
+  color: var(--red-sauce);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 3.052rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.52rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.65;
+  font-size: 1.125rem;
+}
+
+p {
+  margin-bottom: 26px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+img {
+  max-width: 4rem;
+}
+
+a {
+  color: var(--dark-sauce);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  transition: 0.2s;
+}
+
+/* ==========================================================================
+   Nav/Sidebar
+   ========================================================================== */
+nav {
+  background-color: var(--dough);
+  color: var(--dark-sauce);
+  display: flex;
+  justify-content: center;
+}
+
+nav h2 {
+  background-color: var(--dough);
+  color: var(--dark-sauce);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  font-size: 1.125rem;
+  margin: 1em 0;
+}
+
+header div {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Title
+   ========================================================================== */
+
+.title {
+  border-bottom: 1px solid var(--caption);
+  margin: 1em 0;
+}
+
+.caption {
+  color: var(--caption);
+  font-size: 1rem;
+  margin-bottom: 22px;
+}
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+main {
+  padding: 0 1rem;
+}
+
+.tip {
+  margin-bottom: 31px;
+  background: var(--light-dough);
+  border-left: solid var(--dark-dough) 14px;
+  padding: 1.5em;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  display: flex;
+  background-color: var(--red-sauce);
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2em;
+  color: var(--white);
+}
+
+footer p {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.footer-logo {
+  transform: scaleX(-1);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icon {
+  max-width: 2rem;
+  margin: 0 0.5em;
+}
+
+/* ==========================================================================
+   Media query
+   ========================================================================== */
+
+@media screen and (min-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  nav {
+    padding: 1em;
+    min-width: 30%;
+  }
+  main {
+    max-width: 65ch;
+  }
+  #header {
+    position: fixed;
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    margin-left: 10%;
+  }
+}
